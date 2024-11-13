@@ -1,4 +1,3 @@
-import "@testing-library/jest-dom";
 import { filterAndSortCharacters } from "../../components/CharacterList/CharacterList";
 import characters from "../../../public/characters.json";
 
@@ -27,7 +26,7 @@ describe("filterAndSortCharacters", () => {
         expect(sorted[sorted.length - 1].name).toBe("Barliman Butterbur");
     });
 
-    it("Sorts by significance ascending correctly", () => {
+    it("Sorts 'human' category by significance ascending correctly", () => {
         const sorted = filterAndSortCharacters(characters, "human", "significanceAscending");
         expect(sorted[0].name).toBe("Barliman Butterbur");
         expect(sorted[sorted.length - 1].name).toBe("Aragorn");
