@@ -10,7 +10,7 @@ interface CharacterCardProps {
 
 export const CharacterCard = ({ name, title, description, avatarUrl }: CharacterCardProps) => {
     return (
-        <div className={styles.characterCard}>
+        <div data-testid="character-card" className={styles.characterCard}>
             <div className={styles.characterAvatarContainer}>
                 <img src={avatarUrl} alt={name} className={styles.characterAvatar} />
             </div>
